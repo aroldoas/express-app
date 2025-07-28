@@ -15,6 +15,11 @@ let items = [
 
 // Routes
 
+app.post("/project/create", (req, res) => {
+  console.log("Project created with data:", req.body);
+  res.status(201).json({ message: "Project created successfully" });
+});
+
 // GET all
 app.get("/items", (req, res) => {
   res.json(items);
